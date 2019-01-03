@@ -1,4 +1,4 @@
-function [job,mac_num]=read_data(file_name)
+function [job,mac_num,mac_loc]=read_data(file_name)
 data_job=xlsread(file_name,1);
 job=cell(1,size(data_job,2)/2);
 for i=1:2:size(data_job,2)
@@ -9,3 +9,4 @@ for i=1:2:size(data_job,2)
     end
 end
 mac_num=xlsread(file_name,2);
+mac_loc=xlsread(file_name,3);

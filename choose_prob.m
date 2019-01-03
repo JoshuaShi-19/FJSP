@@ -9,11 +9,11 @@ f=1./max_time'; %取距离倒数
 %根据个体的适应度计算其被选择的概率  
 fsum=0;  
 for i=1:pop_scale  
-   fsum=fsum+f(i)^2;% 让适应度越好的个体被选择概率越高  
+   fsum=fsum+f(i)^10;% 让适应度越好的个体被选择概率越高  
 end  
 ps=zeros(pop_scale,1);  
 for i=1:pop_scale  
-   ps(i)=f(i)^2/fsum;  
+   ps(i)=f(i)^10/fsum;  
 end   
 %计算累积概率  
 p=zeros(pop_scale,1);  
